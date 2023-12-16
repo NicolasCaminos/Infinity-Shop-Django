@@ -54,7 +54,7 @@ python manage.py runserver
 
 <br>
 
-![primero]https://github.com/NicolasCaminos/ProyectoFinal/blob/main/aplicacion/static/aplicacion/assets/primero.gif)
+![primero](https://github.com/NicolasCaminos/ProyectoFinal/blob/main/aplicacion/static/aplicacion/assets/primero.gif)
 
 
 
@@ -64,7 +64,7 @@ python manage.py runserver
 
 <br>
 
-![segundo](https://github.com/NicolasCaminos/ProyectoFinal/blob/main/aplicacion/static/aplicacion/assets/segundo.gif)
+![segundo](https://raw.githubusercontent.com/NicolasCaminos/ProyectoFinal-main/main/aplicacion/static/aplicacion/assets/segundo.gif)
 
 
 <br><br>
@@ -73,7 +73,7 @@ python manage.py runserver
 
 <br>
 
-![avatar](https://github.com/NicolasCaminos/ProyectoFinal/blob/main/aplicacion/static/aplicacion/assets/avatar.gif)
+![avatar](https://raw.githubusercontent.com/NicolasCaminos/ProyectoFinal-main/main/aplicacion/static/aplicacion/assets/avatar.gif)
 
 <br><br>
 
@@ -89,7 +89,7 @@ python manage.py runserver
 
 <br>
 
-![cuarto](https://github.com/NicolasCaminos/ProyectoFinal/aplicacion/static/aplicacion/assets/cuarto.gif)
+![cuarto](https://raw.githubusercontent.com/NicolasCaminos/ProyectoFinal-main/main/aplicacion/static/aplicacion/assets/cuarto.gif)
 
 
 
@@ -99,7 +99,7 @@ python manage.py runserver
 
 <br>
 
-![quinto](https://github.com/NicolasCaminos/ProyectoFinal/blob/main/aplicacion/static/aplicacion/assets/quinto.gif)
+![quinto](https://raw.githubusercontent.com/NicolasCaminos/ProyectoFinal-main/main/aplicacion/static/aplicacion/assets/quinto.gif)
 
 <br>
 
