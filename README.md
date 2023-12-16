@@ -81,7 +81,7 @@ python manage.py runserver
 
 <br>
 
-![tercero](https://github.com/NicolasCaminos/ProyectoFinal/blob/main/aplicacion/static/aplicacion/assets/tercero.gif)
+![tercero](https://raw.githubusercontent.com/NicolasCaminos/ProyectoFinal-main/main/aplicacion/static/aplicacion/assets/avatar.gif)
 
 <br><br>
 
@@ -89,7 +89,7 @@ python manage.py runserver
 
 <br>
 
-![cuarto](https://github.com/NicolasCaminos/ProyectoFinal/blob/main/aplicacion/static/aplicacion/assets/cuarto.gif)
+![cuarto](https://github.com/NicolasCaminos/ProyectoFinal/aplicacion/static/aplicacion/assets/cuarto.gif)
 
 
 
@@ -100,8 +100,6 @@ python manage.py runserver
 <br>
 
 ![quinto](https://github.com/NicolasCaminos/ProyectoFinal/blob/main/aplicacion/static/aplicacion/assets/quinto.gif)
-
-
 
 <br>
 
