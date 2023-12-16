@@ -50,7 +50,7 @@ python manage.py runserver
 
 <br>
 
-3 - La pantalla principal de la web muestra la bienvenida, el listado de recetas en formato card y un input de búsqueda, este último permite buscar recetas por su nombre. Si se ingresa un nombre de receta que no existe, se mostrará un mensaje de feedback. Al hacer click en una receta se navegará a su detalle:
+3 - La pantalla principal de la web muestra la bienvenida, el listado de recetas en formato card y un input de búsqueda, este último permite buscar recetas por su nombre. Si se ingresa un nombre de receta que no existe, se mostrará un mensaje de feedback. Al hacer click en una receta se navegará a su detalle: 
 
 <br>
 
