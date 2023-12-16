@@ -1,0 +1,23 @@
+{% extends "aplicacion/index.html" %}
+{% block title %} Detalle del proveedor {% endblock %}
+{% block content %}
+<section class="model-detail">
+  <h2>Detalle del proveedor</h2>
+  <ul>
+    <li><span>Nombre del proveedor:</span> {{ proveedor.nombre }}</li>
+    <li><span>Teléfono:</span> {{proveedor.telefono}}</li>
+    <li><span>Email:</span> {{proveedor.email}}</li>
+    <li><span>Localidad:</span>{{proveedor.localidad}}</li>
+    <li><span>Sitio web:</span><a href={{proveedor.sitio_web}} target="_blank">{{proveedor.sitio_web}}</a></li>
+    <li><span>Productos distribuidos:</span>{{proveedor.producto}}</li>
+    <li><span>Métodos de pago aceptados:</span>{{proveedor.metodos_pago}}</li>
+    <li><span>Entrega inmediata:</span>
+      {% if proveedor.entrega_inmediata %}
+      Sí
+      {% else %}
+      No
+      {% endif %}
+    </li>
+  </ul>
+</section>
+{% endblock %}

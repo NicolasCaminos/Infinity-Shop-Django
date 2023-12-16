@@ -1,0 +1,12 @@
+{% extends "aplicacion/index.html" %}
+{% block title %} Eliminar Receta {% endblock %}
+{% block content %}
+<form action="" method="POST" class="input-form">
+  {% csrf_token %}
+  <p>¿Está seguro de eliminar {{view.nombre}}?</p>
+  <div class="inline">
+    <button type="submit">Eliminar</button>
+    <a class="btn" href="{% url view.url %}">Cancelar</a>
+  </div>
+</form>
+{% endblock %}

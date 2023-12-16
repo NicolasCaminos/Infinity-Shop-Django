@@ -1,0 +1,17 @@
+{% extends "aplicacion/index.html" %}
+{% block title %} Login en Cocinando Ando {% endblock %}
+{% block content %}
+<h1>Acceso para usuarios</h1>
+{% if error %}
+<h2 class="login-error">
+  {{ error }}
+</h2>
+{% endif %}
+<section class="form-container">
+  <form action="" method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Ingresar</button>
+  </form>
+</section>
+{% endblock %}

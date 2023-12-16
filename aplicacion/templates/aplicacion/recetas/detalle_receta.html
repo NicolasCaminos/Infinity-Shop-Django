@@ -1,0 +1,23 @@
+{% extends "aplicacion/index.html" %}
+{% block title %} Detalle de la receta {% endblock %}
+{% block content %}
+<section class="description-section">
+  <article>
+    <div style="display: flex">
+      <img src="{{object.imagen_url}}" alt="{{object.nombre}}" class="img-desc">
+    </div>
+    <div class="info">
+      <h2>{{object.nombre}}</h2>
+      <p>Para preparar esta receta necesitas los siguientes ingredientes: <b>{{object.ingredientes}}</b></p>
+      <p>⏲️ El tiempo estimado para su preparación es de <b>{{object.tiempo}} minutos</b>.</p>
+      {% if object.dificultad == 3 %}
+      <p>⚠️Atento! Esta receta es <b> difícil</b> de preparar. Su escala es de 3 / 3</p>
+      {% elif object.dificultad == 2 %}
+      <p>🔥 Tu puedes! Esta receta tiene una dificultad <b>mediana</b> de preparar. Su escala es de 2 / 3</p>
+      {% else %}
+      <p>✅ A divertirse! Esta receta es <b>fácil</b> de preparar.</p>
+      {% endif %}
+    </div>
+  </article>
+</section>
+{% endblock %}

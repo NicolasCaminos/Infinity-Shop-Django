@@ -1,0 +1,28 @@
+{% extends "aplicacion/index.html" %}
+{% block title %} Detalle del restaurante {% endblock %}
+{% block content %}
+<section class="model-detail">
+  <h2>Detalle del restaurante</h2>
+  <ul>
+    <li><span>Nombre de la empresa:</span> {{ restaurante.nombre }}</li>
+    <li><span>Dirección laboral:</span> {{restaurante.direccion}}</li>
+    <li><span>Categoría:</span> {{restaurante.categoria}}</li>
+    <li><span>Envío a domicilio:</span>
+      {% if restaurante.envio_domilicio %}
+      Si
+      {% else %}
+      No
+      {% endif %}
+    </li>
+    <li><span>Calificación:</span> {{restaurante.calificacion}} ⭐</li>
+    <li><span>Capacidad:</span>{{restaurante.capacidad}} personas</li>
+    <li><span>Se realizan eventos</span>
+      {% if restaurante.eventos %}
+      Si
+      {% else %}
+      No
+      {% endif %}
+    </li>
+  </ul>
+</section>
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends "aplicacion/index.html" %}
+{% block title %} Recetas {% endblock %}
+{% block content %}
+<h2>Listado de Recetas</h2>
+<dialog id="dialog">
+  <form action="" method="POST" class="input-form">
+    {% csrf_token %}
+    {{ form }}
+    <div class="inline">
+      <button type="submit">Enviar</button>
+      <button id="close-dialog">Cerrar</button>
+    </div>
+  </form>
+</dialog>
+<button id="show-dialog">Crear Receta</button>
+<table>
+  <thead>
+    <th>Imagen</th>
+    <th>Nombre</th>
+    <th>Ingredientes</th>
+    <th>Tiempo</th>
+    <th>Dificultad</th>
+    <th>Acciones</th>
+  </thead>
+  <tbody>
+    {% for receta in recetas %}
+    <tr>
+      <td><img class="food-img" src="{{receta.imagen_url}}" alt="{{receta.nombre}}"></td>
+      <td>{{receta.nombre}}</td>
+      <td>{{receta.ingredientes}}</td>
+      <td>{{receta.tiempo}} minutos</td>
+      <td>{{receta.dificultad}} / 3</td>
+      <td>
+        <a href="{% url 'detail_receta' receta.id %}">
+          <i class="fa-regular fa-eye" style="color: #ffffff;" title="Ver receta"></i>
+        </a>
+        <a href="{% url 'edit_receta' receta.id %}">
+          <i class="fa-regular fa-edit" style="color: #ffffff;" title="Editar receta"></i>
+        </a>
+        <a href="{% url 'delete_receta' receta.id %}">
+          <i class="fa-regular fa-trash-can" style="color: #ffffff;" title="Eliminar receta"></i>
+        </a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

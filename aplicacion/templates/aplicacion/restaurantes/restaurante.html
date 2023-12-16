@@ -1,0 +1,46 @@
+{% extends "aplicacion/index.html" %}
+{% block title %} Restaurantes {% endblock %}
+{% block content %}
+<h2>Listado de Restaurantes</h2>
+<dialog id="dialog">
+  <form action="" method="POST" class="input-form">
+    {% csrf_token %}
+    {{ form }}
+    <div class="inline">
+      <button type="submit">Enviar</button>
+      <button id="close-dialog">Cerrar</button>
+    </div>
+  </form>
+</dialog>
+<button id="show-dialog">Agregar restaurante</button>
+<table>
+  <thead>
+    <th>Nombre</th>
+    <th>Dirección</th>
+    <th>Teléfono</th>
+    <th>Categoría</th>
+    <th>Acciones</th>
+  </thead>
+  <tbody>
+    {% for restaurante in restaurantes %}
+    <tr>
+      <td>{{restaurante.nombre}}</td>
+      <td>{{restaurante.direccion}}</td>
+      <td>{{restaurante.telefono}}</td>
+      <td>{{restaurante.categoria}}</td>
+      <td>
+        <a href="{% url 'detail_restaurante' restaurante.id %}">
+          <i class="fa-regular fa-eye" style="color: #ffffff;" title="Ver restaurante"></i>
+        </a>
+        <a href="{% url 'edit_restaurante' restaurante.id %}">
+          <i class="fa-regular fa-edit" style="color: #ffffff;" title="Editar restaurante"></i>
+        </a>
+        <a href="{% url 'delete_restaurante' restaurante.id %}">
+          <i class="fa-regular fa-trash-can" style="color: #ffffff;" title="Eliminar restaurante"></i>
+        </a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

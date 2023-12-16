@@ -1,0 +1,41 @@
+{% extends "aplicacion/index.html" %}
+{% block title %} Acerca de mi {% endblock %}
+{% block content %}
+{% load static %}
+<section class="about">
+  <h2>Acerca de mi</h2>
+  <article>
+    <div class="about-me">
+      <div class="about-me__info">
+        <h3>¿Quién soy?</h3>
+        <p>Soy un Analista en sistemas de computación.</p>
+        <p>Comencé a estudiar la tecnicatura en el 2108,y ahora estudio la carrera FullStack en Coderhouse 
+          con el stack MERN, la cuál la finalizo en Febrero y decidí realizar el curso de python ya que soy tutor tambien en Coder de Data Science</p>
+        <div class="about-card">
+      
+          <div>
+            <h4>Nicolas Caminos</h4>
+            <h5>Software Developer</h5>
+          </div>
+        </div>
+      </div>
+      <div class="about-me__img">
+        <img src="{% static 'aplicacion/assets/profile.jpg' %}" alt="Federico Krenn, software developer"
+          class="profile-img">
+      </div>
+    </div>
+    <ul>
+      <li>
+        <a href="https://www.linkedin.com/in/nicolas_caminos/" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/NicolasCaminos" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+    </ul>
+  </article>
+</section>
+{% endblock %}

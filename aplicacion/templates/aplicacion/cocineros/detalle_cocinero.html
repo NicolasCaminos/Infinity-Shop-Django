@@ -1,0 +1,15 @@
+{% extends "aplicacion/index.html" %}
+{% block title %} Detalle del cocinero{% endblock %}
+{% block content %}
+<section class="model-detail">
+  <h2>Detalle de cocinero</h2>
+  <ul>
+    <li><span>Nombre completo:</span> {{ cocinero.nombre }} {{ cocinero.apellido }}</li>
+    <li><span>Edad:</span> {{cocinero.edad}} años</li>
+    <li><span>Especialidad:</span> {{cocinero.especialidad}}</li>
+    <li><span>Experiencia:</span> {{cocinero.anios_experiencia}} años</li>
+    <li><span>Email:</span> {{cocinero.email}}</li>
+    <li><span>Telefono:</span> {{cocinero.telefono}}</li>
+  </ul>
+</section>
+{% endblock %}

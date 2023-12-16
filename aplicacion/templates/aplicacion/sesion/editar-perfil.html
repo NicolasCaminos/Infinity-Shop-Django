@@ -1,0 +1,15 @@
+{% extends "aplicacion/index.html" %}
+{% block title %} Editar perfil {% endblock %}
+{% block content %}
+{% load static %}
+<form action="" method="POST" class="input-form">
+  <h2>Editar perfil</h2>
+  <a href="{% url 'agregar_avatar' %}" class="link-avatar">Cambiar avatar</a>
+  <a href="{% url 'cambiar_password' %}" class="link-avatar">Cambiar Contraseña</a>
+  {% csrf_token %}
+  {{ form }}
+  <div class="inline">
+    <button type="submit">Actualizar</button>
+  </div>
+</form>
+{% endblock %}
