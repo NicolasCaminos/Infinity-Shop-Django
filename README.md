@@ -54,7 +54,7 @@ python manage.py runserver
 
 <br>
 
-![primero](https://github.com/NicolasCaminos/ProyectoFinal/blob/main/aplicacion/static/aplicacion/assets/primero.gif)
+![primero](https://raw.githubusercontent.com/NicolasCaminos/ProyectoFinal-main/main/aplicacion/static/aplicacion/assets/primero.gif)
 
 
 
