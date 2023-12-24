@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %} Editar perfil {% endblock %}
+{% block content %}
+{% load static %}
+<h2>Editar perfil</h2>
+<form  method="POST" id="contenedorFormulario" >
+  <a href="{% url 'agregar_avatar' %}" class="btn btn-primary">Cambiar avatar</a>
+  <a href="{% url 'cambiar_password' %}" class="btn btn-primary">Cambiar Contraseña</a>
+  {% csrf_token %}
+  {{ form }}
+  <div class="inline">
+    <button type="submit" class="btn btn-primary">Actualizar</button>
+  </div>
+</form>
+{% endblock %}

@@ -1,0 +1,153 @@
+$header-bg-color: var(--#{prefix}-header-bg-color, $color-slate-100);
+$body-dark-bg-color: var(--#{$prefix}-body-bg-color, #334155);
+
+[data-theme='dark'] {
+    color-scheme: dark;
+    --#{$prefix}-body-bg-color: #334155;
+    --#{$prefix}-body-text-color: $color-slate-50;
+    --#{$prefix}-heading-text-color: $color-slate-50;
+    transition: 1500ms;
+    :is(.bi-brightness-alt-high, .bi-moon-fill){
+
+        color:$color-slate-50;
+    }
+    .navbar {
+        background-color: $color-slate-700 !important;
+        color: $color-slate-50 !important;
+        transition: 1500ms;
+
+        
+
+
+        & li a {
+            color: $color-slate-50 !important;
+        }
+
+        li:hover {
+            border-radius: 10px;
+
+            a:hover {
+                background-color: aliceblue;
+                color: #334155 !important;
+                transition: 100ms;
+                border-radius: 10px;
+            }
+        }
+    }
+
+    body {
+        main {
+
+            li:hover {
+                border-radius: 30px;
+
+                a:hover {
+                    background-color: $color-slate-50 !important;
+                    color: #334155 !important;
+                    transition: 100ms;
+                    border-radius: 30px;
+                }
+            }
+        }
+        #contenedorFormulario {
+        background-color: $color-slate-50;
+        h2{
+            color: #334155;
+        }
+        label{
+            color: #334155;
+        }
+
+    }
+    }
+
+    .embed-iframe-items::-webkit-scrollbar-thumb {
+        background-color: $color-slate-50;
+        border-radius: 10px;
+    }
+
+    a {
+        color: $color-slate-50 !important;
+    }
+
+    .card {
+        box-shadow: 0px 0px 5px 1px #e2e8f0;
+
+        h5,
+        p {
+            color: $color-slate-700;
+        }
+    }
+
+    .card:hover {
+        box-shadow: 0px 0px 5px 1px #e2e8f0;
+    }
+
+    .base-experience {
+        p {
+            color: $color-slate-700;
+        }
+    }
+
+    .btn-close {
+        background-color: $color-slate-50;
+    }
+
+    .logo_Infinity {
+        content: url('../assets/img/2.png');
+        height: 80px !important;
+        width: 80px !important;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        .logo_Infinity img {
+            border: none !important; ; /* Anula cualquier regla de borde */
+        }
+    }
+     
+    .loginform{
+        background-color:$color-slate-50;
+  
+        h2{
+            color: #334155;
+        }
+        form{
+            p{
+                color: #334155;
+            }
+            input{
+                background-color:$color-slate-50; ;
+                color: #334155;
+            }
+        }
+    }
+    .offcanvas-header {
+        background-color: #334155;
+        color: $color-slate-50;
+        border-width: 0px 0px 1px;
+        border-style: solid solid solid;
+    }
+
+    .offcanvas-body {
+        border-color: $color-slate-50;
+        background-color: #334155;
+        color: $color-slate-50;
+
+    }
+
+    }
+    #miFormulario{
+        label{
+            color: #334155 !important;
+        }
+        background-color: $color-slate-50;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px; 
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-top: 20px; 
+        margin-right: 20px; 
+        margin-left: 20px; 
+    }
+    

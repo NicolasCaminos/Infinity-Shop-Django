@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Detalles de la Categoría</h2>
+    <p><strong>Nombre:</strong> {{ categoria.nombre }}</p>
+    <!-- Puedes mostrar más detalles de la categoría aquí según tu modelo -->
+    
+    <a href="{% url 'categoria' %}" class="btn btn-primary btn-sm">Volver a Categorías</a>
+</div>
+{% endblock %}

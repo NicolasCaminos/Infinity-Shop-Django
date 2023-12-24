@@ -1,0 +1,471 @@
+@import "../utilities/variables";
+
+.loginform{
+    background-color: #334155;
+    margin-top: 5vh;
+    color: aliceblue;
+    width: 50%;
+    height: 360px;
+    align-items: center;
+    margin-left: 45vh;
+    border-radius: 20px;
+    h2{
+        text-align: center;
+        color: aliceblue;
+    }
+    .form_controler{
+    }
+    form{
+        p{
+            color: aliceblue;
+        }
+        width: 50%;
+        margin-left: 25vh;
+        #id_username{
+            border-radius: 10px;
+
+        }
+        #id_password{
+            border-radius: 10px;
+
+        }
+    }
+    .buttonLogin{
+        display: inline-flexbox; 
+        .btn{
+            width: max-content;
+            height: fit-content;
+            margin-top: 2vh;
+        }
+    }
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    .logo_Infinity {
+        content: url('../assets/img/4.png');
+        height: 80px !important;
+        width: 80px !important;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        .logo_Infinity img {
+            border: none !important;
+        }
+    }
+    .modal{
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1050;
+    }
+    .modal-backdrop {
+        z-index: 1040;
+    }
+    & main {
+        & .row {
+            margin-top: 10vh;
+        }
+
+        li:hover {
+            background-color: #334155 !important;
+            color:aliceblue;
+            border-radius: 30px;
+
+            a:hover {
+                background-color: #334155;
+                color: aliceblue;
+                transition: 100ms;
+                border-radius: 10px;
+            }
+        }
+    }
+    
+    .cardIndex {
+        text-align: justify;
+
+        .btn {
+            display: none;
+        }
+
+        img {
+            height: 180px;
+            width: 180px;
+        }
+    }
+
+    .cardIndex:hover {
+        box-shadow: 0px 0px 5px 1px grey;
+        height: 400px;
+        transition-property: height;
+        transition-duration: 1500ms;
+
+        .btn {
+            margin-top: 50px;
+            display: block;
+        }
+    }
+
+    .base-app {
+        margin-top: 5vh;
+
+        .btn {
+            margin-left: 40%;
+            height: 50px;
+            width: 180px;
+            border-radius: 30px !important;
+            border-color: $color-orange;
+            border-width: 2px 2px 2px;
+            border-style: solid solid solid;
+
+        }
+    }
+    .base-partners {
+        position: absolute;
+
+        height: 900px;
+        margin-top: 10vh;
+        display: block !important;
+        max-width:90%;
+        .container-fluid {
+            .d-flex {
+                gap: 10px;
+            }
+
+            .partners_images {
+                height: 160px;
+                width: 150px;
+            }
+        }
+    }
+    #items_user {
+        li{
+        height: 80px;
+        width: 100pc;
+        margin-left: 10px;
+        margin-top: 70px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        }
+    }
+
+
+    .base-contact-form {
+        height: 450px;
+        position: static;
+        .col-auto {
+
+            background-color: $color-slate-50 !important;
+            width: 80% !important;
+            height: 250px;
+            position: relative !important;
+            margin-left: 20vh;
+            margin-top: 20px;
+            padding: 10 0 0 0;
+            border-radius: 30px;
+            gap: 10px !important;
+
+            .mb-3 {
+                margin-top: 10px !important;
+                border-radius: 10px !important;
+                align-content: center !important;
+            }
+        }
+    }
+
+    .base-experience {
+        max-width: 90%;
+        :is(.experiences1, .experiences2, .experiences3, .experiences4, .experiences5, .experiences6, .experiences7, .experiences8, .experiences9, .experiences10) {
+            display: block;
+            position: relative;
+            justify-content: center;
+            margin-top: 15vh;
+            background-color: $color-slate-200;
+            width: 300px;
+            height: 300px;
+            gap: 100px;
+            margin-left: 30px;
+
+            img {
+                width: 70px;
+                height: 70px;
+                border-radius: 40px;
+                float: left;
+
+                p {
+                    display: flex;
+                    width: 10%;
+                    text-align: center;
+                    font-size: 7px;
+                    margin-left: 60px;
+                }
+            }
+
+            .instagram_log {
+                height: 25px;
+                width: 25px;
+            }
+
+            p {
+                display: flex;
+                vertical-align: top;
+                text-align: justify;
+            }
+        }
+    }
+
+    .base-elegirnos {
+        max-width: 90%;
+        :is(.elijen1,.elijen2,.elijen3,.elijen4,.elijen5,.elijen6,.elijen7) {
+            display: inline-block;
+            width: 300px;
+            height: 380px;
+            margin-top: 10px;
+            margin-left: 40px;
+            display: inline-block;
+            border-radius: 10px;
+            border-style: solid solid solid;
+            p {
+                font-size: 15px;
+            }
+
+            img {
+
+                height: 50%;
+                width: 50%;
+                margin-left: 20%;
+            }
+        }
+        :is(.elijen2,.elijen5,.elijen6) {
+            background-color: #FFCA2C;
+        }
+        :is(.elijen4,.elijen7) {
+            background-color: #478AC9;
+        }
+    }
+
+    .whatsappbutton {
+        position: absolute;
+        height: 80px;
+        width: 80px;
+        float: left;
+
+        img {
+            display: grid;
+            z-index: 9000;
+            position: fixed;
+        }
+    }
+
+    .base-geolocali-form {
+        height: 450px;
+        position: relative;
+
+        iframe {
+            height: 50%;
+            width: 40%;
+            margin-left: 5%;
+            margin-top: 5%;
+            position: static;
+        }
+
+        .datos {
+            position: static;
+            margin-left: 30%;
+            max-width: 20%;
+
+            p {
+                position: static;
+                display: flex word-break;
+                margin-bottom: 10%;
+                font-size: 26px;
+                color: $color-slate-50;
+            }
+        }
+    }
+    .base-partners {
+
+        position: relative;
+        align-items: center;
+        height: fit-content;
+        
+        .container-fluid {
+            .d-flex {
+                gap: 10px;
+            }
+
+            .partners_images {
+                display: inline-flex;
+                height: 160px;
+                width: 150px;
+            }
+        }
+    }
+    :is(.bi-brightness-alt-high, .bi-moon-fill){
+        display: inline;
+        position: static;
+        margin-right: 50px;
+        color: #334155;
+    }
+    .bi-brightness-alt-high{
+        margin-top: 0px;
+    }
+    #slider{
+        display: inline-flex;
+        position: absolute;
+    }
+    :is(.bi-brightness-alt-high, .bi-moon-fill){
+        display: inline;
+    }
+    .base-geolocali-form {
+        position: relative;
+        background-color: $color-blue-600;
+        height: 400px;
+        margin-bottom:300px;
+        
+        iframe {
+            position: absolute;
+            height: 200px;
+            width: 300px;
+            margin-bottom: 50vh;
+        }
+
+        .datos {
+            position: static;
+            margin-left: 50%;
+            max-width: 20%;
+
+            p {
+                display: flex word-break;
+                margin-bottom: 10%;
+                font-size: 10px;
+                color: $color-slate-50;
+            }
+        }
+    }
+    .kanban-board {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px;
+      
+        .kanban-column {
+          flex: 1;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+      
+          h2 {
+            text-align: center;
+          }
+      
+          .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+      
+            h5 {
+              margin-bottom: 5px;
+            }
+      
+            p {
+              margin: 0;
+        
+            }
+          }
+      
+          p.no-cards {
+            text-align: center;
+            color: #777;
+          }
+        }
+        .abierto{
+            background-color:tomato;
+            width: 45px;
+            font-size: 12px;
+            color: aliceblue;
+            border-radius:3px;
+          }
+        .enprogreso{
+            background-color: #FFCA2C;
+            width: 50px;
+            font-size: 12px;
+            color: aliceblue;
+            border-radius:3px;
+            text-align: center;
+          }
+          .cancelado{
+            background-color: greenyellow;
+            width: 45px;
+            font-size: 12px;
+            color: aliceblue;
+            border-radius:3px;
+          }
+
+      }
+      .avatar{
+        border-radius: 50px;
+        height: 50px;
+        width: 50px;
+      }
+      .card{
+        position: relative;
+        display: grid;
+        height: 400px;
+      }
+    .comentarios{
+        position: relative;
+        display: grid;
+        margin-top: 0vh;
+        left: 70%;
+        margin-right: 50%;
+        width: fit-content;
+    }
+    .card {
+        margin-bottom: 20px;
+      
+        .card-header {
+          background-color: #17a2b8;
+          color: #fff;
+        }
+      
+        .card-title {
+          font-size: 1.5rem;
+          margin-bottom: 10px;
+        }
+      
+        .card-text {
+          margin-bottom: 15px;
+        }
+      
+        .list-group-item {
+          border: none;
+          padding: 15px;
+      
+          img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+          }
+          .btn-danger {
+            margin-top: 10px;
+          }
+        }
+        .list-group:hover{
+            color: #fff !important;
+          }
+      }
+      #exampleModal{
+
+        margin-top: 50px;
+      }
+
+}
+

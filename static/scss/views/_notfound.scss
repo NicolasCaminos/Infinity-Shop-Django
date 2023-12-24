@@ -1,0 +1,12 @@
+.logo_not_found {
+    content: url('../assets/img/pagenotfound.png');
+    height: 580px !important;
+    width: 1080px !important;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    .logo_Infinity img {
+        border: none !important; ; /* Anula cualquier regla de borde */
+    }
+}

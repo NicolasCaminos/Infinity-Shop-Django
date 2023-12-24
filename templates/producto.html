@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Mis Productos</h1>
+<div>
+</div>
+<a type="button" href="{% url 'buscar_producto' %}" class="btn btn-primary">
+  Buscar Producto
+</a>
+<a href="{% url 'crear_producto' %}" class="btn btn-primary">Agregar</a>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Descripción</th>
+      <th>Categoría</th>
+      <th>Precio</th>
+      <th>Stock</th>
+      <th>Imagen</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for producto in productos %}
+    <tr>
+      <td>{{ producto.nombre }}</td>
+      <td>{{ producto.descripcion }}</td>
+      <td>{{ producto.categoria.nombre }}</td>
+      <td>${{ producto.precio }}</td>
+      <td>{{ producto.stock }}</td>
+      <td>
+        {% if producto.imagen %}
+        <img style="max-height: 80px; max-width: 80px;" src="{{ producto.imagen.url }}" alt="{{ producto.nombre }}">
+        {% else %}
+        Sin imagen
+        {% endif %}
+      </td>
+      <td>
+        <a href="{% url 'ProductoDetail' pk=producto.id|default:0 %}" class="btn btn-info">
+          Ver
+      </a>
+        <form id="eliminarForm" method="post" action="{% url 'producto' %}" style="display: inline;">
+          {% csrf_token %}
+          <input type="hidden" name="eliminarProducto" value="{{ producto.nombre }}">
+          <button type="submit" class="bi bi-eraser-fill btn btn-danger" title="Eliminar" id="eliminarBtn"></button>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}

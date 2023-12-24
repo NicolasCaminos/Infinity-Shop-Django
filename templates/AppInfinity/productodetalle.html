@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block contexto %}
+
+    <p>El nombre del curso es: <b>{{producto.nombre}}</b></p>
+<p>Camada: {{producto.camada}}</p>
+<p>
+    <a href="{% url 'producto' %}">Listar Cursos</a>
+</p>
+
+{% endblock %}

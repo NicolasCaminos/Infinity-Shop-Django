@@ -1,0 +1,1318 @@
+@charset "UTF-8";
+/*css Variables prefix*/
+/*font family*/
+/*font sizes*/
+/*12px*/
+/*14px*/
+/*16px*/
+/*18px*/
+/*20px*/
+/*24px*/
+/*30*/
+/*36px*/
+/*48px*/
+/*60px*/
+/* font weigth*/
+/*leading / line heights*/
+/*COLORS*/
+/*THEME GLOBAL VALUES*/
+/*css Variables prefix*/
+/*font family*/
+/*font sizes*/
+/*12px*/
+/*14px*/
+/*16px*/
+/*18px*/
+/*20px*/
+/*24px*/
+/*30*/
+/*36px*/
+/*48px*/
+/*60px*/
+/* font weigth*/
+/*leading / line heights*/
+/*COLORS*/
+/*THEME GLOBAL VALUES*/
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Changa+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap");
+:root {
+  color-scheme: light;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+body {
+  height: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-fontt-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -webkit-top-highlight-color: transparent;
+  color: var(--infinity-body-text-color, #64748b) !important;
+  line-height: var(--infinity-line-height-base, 1.5);
+  font-weight: var(--infinity-font-weigth-base, 400);
+  background-color: var(--infinity-body-bg-color, #f1f5f9) !important;
+  font-family: var(--infinity-font-primary, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+  transition: 1000ms;
+}
+body body::-webkit-scrollbar {
+  width: 10px;
+  height: 16px;
+}
+body body::-webkit-scrollbar-thumb {
+  background-color: rgba(20, 20, 20, 0.805);
+  border-radius: 10px;
+}
+body body::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(169, 169, 169, 0.668);
+}
+body img {
+  display: block;
+  max-width: 100%;
+}
+body header {
+  color: var(--infinity-body-bg-color, #f1f5f9);
+}
+
+[data-theme=dark] {
+  color-scheme: dark;
+  --infinity-body-bg-color: #334155;
+  --infinity-body-text-color: $color-slate-50;
+  --infinity-heading-text-color: $color-slate-50;
+  transition: 1500ms;
+}
+[data-theme=dark] :is(.bi-brightness-alt-high, .bi-moon-fill) {
+  color: #FFF;
+}
+[data-theme=dark] .navbar {
+  background-color: #334155 !important;
+  color: #FFF !important;
+  transition: 1500ms;
+}
+[data-theme=dark] .navbar li a {
+  color: #FFF !important;
+}
+[data-theme=dark] .navbar li:hover {
+  border-radius: 10px;
+}
+[data-theme=dark] .navbar li:hover a:hover {
+  background-color: aliceblue;
+  color: #334155 !important;
+  transition: 100ms;
+  border-radius: 10px;
+}
+[data-theme=dark] body main li:hover {
+  border-radius: 30px;
+}
+[data-theme=dark] body main li:hover a:hover {
+  background-color: #FFF !important;
+  color: #334155 !important;
+  transition: 100ms;
+  border-radius: 30px;
+}
+[data-theme=dark] body #contenedorFormulario {
+  background-color: #FFF;
+}
+[data-theme=dark] body #contenedorFormulario h2 {
+  color: #334155;
+}
+[data-theme=dark] body #contenedorFormulario label {
+  color: #334155;
+}
+[data-theme=dark] .embed-iframe-items::-webkit-scrollbar-thumb {
+  background-color: #FFF;
+  border-radius: 10px;
+}
+[data-theme=dark] a {
+  color: #FFF !important;
+}
+[data-theme=dark] .card {
+  box-shadow: 0px 0px 5px 1px #e2e8f0;
+}
+[data-theme=dark] .card h5,
+[data-theme=dark] .card p {
+  color: #334155;
+}
+[data-theme=dark] .card:hover {
+  box-shadow: 0px 0px 5px 1px #e2e8f0;
+}
+[data-theme=dark] .base-experience p {
+  color: #334155;
+}
+[data-theme=dark] .btn-close {
+  background-color: #FFF;
+}
+[data-theme=dark] .logo_Infinity {
+  content: url("../assets/img/2.png");
+  height: 80px !important;
+  width: 80px !important;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+[data-theme=dark] .logo_Infinity .logo_Infinity img {
+  border: none !important; /* Anula cualquier regla de borde */
+}
+[data-theme=dark] .loginform {
+  background-color: #FFF;
+}
+[data-theme=dark] .loginform h2 {
+  color: #334155;
+}
+[data-theme=dark] .loginform form p {
+  color: #334155;
+}
+[data-theme=dark] .loginform form input {
+  background-color: #FFF;
+  color: #334155;
+}
+[data-theme=dark] .offcanvas-header {
+  background-color: #334155;
+  color: #FFF;
+  border-width: 0px 0px 1px;
+  border-style: solid solid solid;
+}
+[data-theme=dark] .offcanvas-body {
+  border-color: #FFF;
+  background-color: #334155;
+  color: #FFF;
+}
+
+#miFormulario {
+  background-color: #FFF;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+#miFormulario label {
+  color: #334155 !important;
+}
+
+/*Hystory*/
+/*css Variables prefix*/
+/*font family*/
+/*font sizes*/
+/*12px*/
+/*14px*/
+/*16px*/
+/*18px*/
+/*20px*/
+/*24px*/
+/*30*/
+/*36px*/
+/*48px*/
+/*60px*/
+/* font weigth*/
+/*leading / line heights*/
+/*COLORS*/
+/*THEME GLOBAL VALUES*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--infinity-heading-text-color, #334155);
+  font-weight: 500;
+  line-height: 1.25;
+  font-family: var(--infinity-font-secondary, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+}
+h1-first-child,
+h2-first-child,
+h3-first-child,
+h4-first-child,
+h5-first-child,
+h6-first-child {
+  margin-top: 0;
+}
+h1-last-child,
+h2-last-child,
+h3-last-child,
+h4-last-child,
+h5-last-child,
+h6-last-child {
+  margin-bottom: 0;
+}
+
+h1 {
+  margin: 32px 0;
+  font-size: 40px;
+}
+
+h2 {
+  margin: 32px 0;
+  font-size: 36px;
+}
+
+h3 {
+  margin: 32px 0;
+  font-size: 30px;
+}
+
+h4 {
+  margin: 20px 0;
+  font-size: 24px;
+}
+
+h5 {
+  margin: 18px 0;
+  font-size: 20px;
+}
+
+h6 {
+  margin: 16px 0;
+  font-size: 18px;
+}
+
+p {
+  color: var(--infinity-body-text-color, #64748b);
+  margin: 16px 0;
+  font-weight: 1.5;
+}
+p-first-child {
+  margin-top: 0;
+}
+p-last-child {
+  margin-bottom: 0;
+}
+
+/*css Variables prefix*/
+/*font family*/
+/*font sizes*/
+/*12px*/
+/*14px*/
+/*16px*/
+/*18px*/
+/*20px*/
+/*24px*/
+/*30*/
+/*36px*/
+/*48px*/
+/*60px*/
+/* font weigth*/
+/*leading / line heights*/
+/*COLORS*/
+/*THEME GLOBAL VALUES*/
+.container {
+  width: 100%;
+  display: block;
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  /* // Small devices (landscape phones, 576px and up) */
+}
+@media only screen and (min-width: 360px) and (max-width: 576px) {
+  .container p {
+    font-size: 0.75rem !important;
+  }
+  .container h3 {
+    font-size: 1.125rem !important;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 975px) {
+  .container p {
+    font-size: 0.75rem !important;
+  }
+  .container h3 {
+    font-size: 1.125rem !important;
+  }
+}
+
+/*css Variables prefix*/
+/*font family*/
+/*font sizes*/
+/*12px*/
+/*14px*/
+/*16px*/
+/*18px*/
+/*20px*/
+/*24px*/
+/*30*/
+/*36px*/
+/*48px*/
+/*60px*/
+/* font weigth*/
+/*leading / line heights*/
+/*COLORS*/
+/*THEME GLOBAL VALUES*/
+/*Variables locales*/
+.base-layout {
+  display: flex;
+  flex-direction: column;
+}
+.base-header {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9000;
+  position: fixed;
+  box-shadow: 0 0 1em -0.125em rgba(10, 10, 10, 0.1), 0 0 1px rgba(10, 10, 10, 0.02);
+  border-bottom: 1px solid var(--prefix-header-border-color, #cbd5e1);
+  background-color: var(--prefix-header-bg-color, #FFF) !important;
+}
+.base-headernav.navbar {
+  background-color: var(--prefix-header-bg-color, #FFF) !important;
+}
+.base-headernav.navbar .bg-light {
+  background-color: var(--prefix-header-bg-color, #FFF) !important;
+}
+.base-content {
+  flex: 1;
+  position: relative;
+  margin-top: 20vh;
+}
+.base-footer {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 32px 16px;
+  top: 30vh;
+  font-size: 16px;
+  font-weight: 400px;
+  bottom: 0;
+  background-color: var(--prefix-header-bg-color, #1e293b);
+}
+.base-footer p {
+  color: var(--prefix-header-border-color, #cbd5e1);
+  display: flex;
+}
+.base-footer ul {
+  text-align: right;
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  left: 120vh;
+  bottom: 0px;
+  align-items: center;
+  justify-content: right;
+  text-decoration: none;
+  position: relative;
+}
+.base-footer li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: var(--prefix-header-border-color, #cbd5e1);
+}
+.base-contact-form {
+  background-color: #478AC9;
+  height: 350px;
+  margin-top: 10vh;
+  z-index: 9000;
+}
+.base-contact-form h2 {
+  text-align: center;
+  color: white;
+}
+
+@media only screen and (min-width: 360px) and (max-width: 576px) {
+  footer {
+    position: relative;
+    width: 100%;
+    height: 20vh;
+    top: 0vh;
+    font-size: 15px;
+  }
+  footer ul {
+    left: 1vh !important;
+    list-style: none;
+    gap: 15px;
+    justify-content: right;
+    text-decoration: none;
+  }
+  footer ul li a {
+    text-decoration: none;
+    font-size: 5px;
+  }
+}
+/* */
+@media only screen and (min-width: 768px) and (max-width: 975px) {
+  footer {
+    position: relative;
+    width: 100%;
+    height: 20vh;
+    top: 20vh;
+    font-size: 15px;
+  }
+  footer ul {
+    position: relative;
+    left: 35vh !important;
+    list-style: none;
+    gap: 15px;
+    justify-content: right;
+    text-decoration: none;
+  }
+  footer ul li a {
+    text-decoration: none;
+    font-size: 15px;
+  }
+}
+/* Document
+ * ========================================================================== */
+/**
+ * 1. Add border box sizing in all browsers (opinionated).
+ * 2. Backgrounds do not repeat by default (opinionated).
+ */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  background-repeat: no-repeat;
+  /* 2 */
+}
+
+/**
+ * 1. Add text decoration inheritance in all browsers (opinionated).
+ * 2. Add vertical alignment inheritance in all browsers (opinionated).
+ */
+::before,
+::after {
+  text-decoration: inherit;
+  /* 1 */
+  vertical-align: inherit;
+  /* 2 */
+}
+
+/**
+ * 1. Use the default cursor in all browsers (opinionated).
+ * 2. Change the line height in all browsers (opinionated).
+ * 3. Breaks words to prevent overflow in all browsers (opinionated).
+ * 4. Use a 4-space tab width in all browsers (opinionated).
+ * 5. Remove the grey highlight on links in iOS (opinionated).
+ * 6. Prevent adjustments of font size after orientation changes in iOS.
+ */
+:where(:root) {
+  cursor: default;
+  /* 1 */
+  line-height: 1.5;
+  /* 2 */
+  overflow-wrap: break-word;
+  /* 3 */
+  -moz-tab-size: 4;
+  /* 4 */
+  tab-size: 4;
+  /* 4 */
+  -webkit-tap-highlight-color: transparent;
+  /* 5 */
+  -webkit-text-size-adjust: 100%;
+  /* 6 */
+}
+
+/* Sections
+ * ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+:where(body) {
+  margin: 0;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Edge, Firefox, and Safari.
+ */
+:where(h1) {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+ * ========================================================================== */
+/**
+ * Remove the margin on nested lists in Chrome, Edge, and Safari.
+ */
+:where(dl, ol, ul) :where(dl, ol, ul) {
+  margin: 0;
+}
+
+/**
+ * 1. Correct the inheritance of border color in Firefox.
+ * 2. Add the correct box sizing in Firefox.
+ */
+:where(hr) {
+  color: inherit;
+  /* 1 */
+  height: 0;
+  /* 2 */
+}
+
+/**
+ * Remove the list style on navigation lists in all browsers (opinionated).
+ */
+:where(nav) :where(ol, ul) {
+  list-style-type: none;
+  padding: 0;
+}
+
+/**
+ * Prevent VoiceOver from ignoring list semantics in Safari (opinionated).
+ */
+:where(nav li)::before {
+  content: "​";
+  float: left;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ * 3. Prevent overflow of the container in all browsers (opinionated).
+ */
+:where(pre) {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+  overflow: auto;
+  /* 3 */
+}
+
+/* Text-level semantics
+ * ========================================================================== */
+/**
+ * Add the correct text decoration in Safari.
+ */
+:where(abbr[title]) {
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+:where(b, strong) {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+:where(code, kbd, samp) {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+:where(small) {
+  font-size: 80%;
+}
+
+/* Embedded content
+ * ========================================================================== */
+/*
+ * Change the alignment on media elements in all browsers (opinionated).
+ */
+:where(audio, canvas, iframe, img, svg, video) {
+  vertical-align: middle;
+}
+
+/**
+ * Remove the border on iframes in all browsers (opinionated).
+ */
+:where(iframe) {
+  border-style: none;
+}
+
+/**
+ * Change the fill color to match the text color in all browsers (opinionated).
+ */
+:where(svg:not([fill])) {
+  fill: currentColor;
+}
+
+/* Tabular data
+ * ========================================================================== */
+/**
+ * 1. Collapse border spacing in all browsers (opinionated).
+ * 2. Correct table border color inheritance in all Chrome, Edge, and Safari.
+ * 3. Remove text indentation from table contents in Chrome, Edge, and Safari.
+ */
+:where(table) {
+  border-collapse: collapse;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  text-indent: 0;
+  /* 3 */
+}
+
+/* Forms
+ * ========================================================================== */
+/**
+ * Remove the margin on controls in Safari.
+ */
+:where(button, input, select) {
+  margin: 0;
+}
+
+/**
+ * Correct the inability to style buttons in iOS and Safari.
+ */
+:where(button, [type=button i], [type=reset i], [type=submit i]) {
+  -webkit-appearance: button;
+}
+
+/**
+ * Change the inconsistent appearance in all browsers (opinionated).
+ */
+:where(fieldset) {
+  border: 1px solid #a0a0a0;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Edge, and Firefox.
+ */
+:where(progress) {
+  vertical-align: baseline;
+}
+
+/**
+ * 1. Remove the margin in Firefox and Safari.
+ * 3. Change the resize direction in all browsers (opinionated).
+ */
+:where(textarea) {
+  margin: 0;
+  /* 1 */
+  resize: vertical;
+  /* 3 */
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome, Edge, and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+:where([type=search i]) {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Safari.
+ */
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+/**
+ * Remove the inner padding in Chrome, Edge, and Safari on macOS.
+ */
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style upload buttons in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+ * ========================================================================== */
+/*
+ * Add the correct styles in Safari.
+ */
+:where(dialog) {
+  background-color: white;
+  border: solid;
+  color: black;
+  height: -moz-fit-content;
+  height: fit-content;
+  left: 0;
+  margin: auto;
+  padding: 1em;
+  position: absolute;
+  right: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+:where(dialog:not([open])) {
+  display: none;
+}
+
+/*
+ * Add the correct display in Safari.
+ */
+:where(details > summary:first-of-type) {
+  display: list-item;
+}
+
+/* Accessibility
+ * ========================================================================== */
+/**
+ * Change the cursor on busy elements in all browsers (opinionated).
+ */
+:where([aria-busy=true i]) {
+  cursor: progress;
+}
+
+/*
+ * Change the cursor on control elements in all browsers (opinionated).
+ */
+:where([aria-controls]) {
+  cursor: pointer;
+}
+
+/*
+ * Change the cursor on disabled, not-editable, or otherwise
+ * inoperable elements in all browsers (opinionated).
+ */
+:where([aria-disabled=true i], [disabled]) {
+  cursor: not-allowed;
+}
+
+/*
+ * Change the display on visually hidden accessible elements
+ * in all browsers (opinionated).
+ */
+:where([aria-hidden=false i][hidden]) {
+  display: initial;
+}
+
+:where([aria-hidden=false i][hidden]:not(:focus)) {
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+/*css Variables prefix*/
+/*font family*/
+/*font sizes*/
+/*12px*/
+/*14px*/
+/*16px*/
+/*18px*/
+/*20px*/
+/*24px*/
+/*30*/
+/*36px*/
+/*48px*/
+/*60px*/
+/* font weigth*/
+/*leading / line heights*/
+/*COLORS*/
+/*THEME GLOBAL VALUES*/
+.loginform {
+  background-color: #334155;
+  margin-top: 5vh;
+  color: aliceblue;
+  width: 50%;
+  height: 360px;
+  align-items: center;
+  margin-left: 45vh;
+  border-radius: 20px;
+}
+.loginform h2 {
+  text-align: center;
+  color: aliceblue;
+}
+.loginform form {
+  width: 50%;
+  margin-left: 25vh;
+}
+.loginform form p {
+  color: aliceblue;
+}
+.loginform form #id_username {
+  border-radius: 10px;
+}
+.loginform form #id_password {
+  border-radius: 10px;
+}
+.loginform .buttonLogin {
+  display: inline-flexbox;
+}
+.loginform .buttonLogin .btn {
+  width: max-content;
+  height: fit-content;
+  margin-top: 2vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body .logo_Infinity {
+  content: url("../assets/img/4.png");
+  height: 80px !important;
+  width: 80px !important;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+body .logo_Infinity .logo_Infinity img {
+  border: none !important;
+}
+body .modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1050;
+}
+body .modal-backdrop {
+  z-index: 1040;
+}
+body main .row {
+  margin-top: 10vh;
+}
+body main li:hover {
+  background-color: #334155 !important;
+  color: aliceblue;
+  border-radius: 30px;
+}
+body main li:hover a:hover {
+  background-color: #334155;
+  color: aliceblue;
+  transition: 100ms;
+  border-radius: 10px;
+}
+body .cardIndex {
+  text-align: justify;
+}
+body .cardIndex .btn {
+  display: none;
+}
+body .cardIndex img {
+  height: 180px;
+  width: 180px;
+}
+body .cardIndex:hover {
+  box-shadow: 0px 0px 5px 1px grey;
+  height: 400px;
+  transition-property: height;
+  transition-duration: 1500ms;
+}
+body .cardIndex:hover .btn {
+  margin-top: 50px;
+  display: block;
+}
+body .base-app {
+  margin-top: 5vh;
+}
+body .base-app .btn {
+  margin-left: 40%;
+  height: 50px;
+  width: 180px;
+  border-radius: 30px !important;
+  border-color: #FFCA2C;
+  border-width: 2px 2px 2px;
+  border-style: solid solid solid;
+}
+body .base-partners {
+  position: absolute;
+  height: 900px;
+  margin-top: 10vh;
+  display: block !important;
+  max-width: 90%;
+}
+body .base-partners .container-fluid .d-flex {
+  gap: 10px;
+}
+body .base-partners .container-fluid .partners_images {
+  height: 160px;
+  width: 150px;
+}
+body #items_user li {
+  height: 80px;
+  width: 100pc;
+  margin-left: 10px;
+  margin-top: 70px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+body .base-contact-form {
+  height: 450px;
+  position: static;
+}
+body .base-contact-form .col-auto {
+  background-color: #FFF !important;
+  width: 80% !important;
+  height: 250px;
+  position: relative !important;
+  margin-left: 20vh;
+  margin-top: 20px;
+  padding: 10 0 0 0;
+  border-radius: 30px;
+  gap: 10px !important;
+}
+body .base-contact-form .col-auto .mb-3 {
+  margin-top: 10px !important;
+  border-radius: 10px !important;
+  align-content: center !important;
+}
+body .base-experience {
+  max-width: 90%;
+}
+body .base-experience :is(.experiences1, .experiences2, .experiences3, .experiences4, .experiences5, .experiences6, .experiences7, .experiences8, .experiences9, .experiences10) {
+  display: block;
+  position: relative;
+  justify-content: center;
+  margin-top: 15vh;
+  background-color: #e2e8f0;
+  width: 300px;
+  height: 300px;
+  gap: 100px;
+  margin-left: 30px;
+}
+body .base-experience :is(.experiences1, .experiences2, .experiences3, .experiences4, .experiences5, .experiences6, .experiences7, .experiences8, .experiences9, .experiences10) img {
+  width: 70px;
+  height: 70px;
+  border-radius: 40px;
+  float: left;
+}
+body .base-experience :is(.experiences1, .experiences2, .experiences3, .experiences4, .experiences5, .experiences6, .experiences7, .experiences8, .experiences9, .experiences10) img p {
+  display: flex;
+  width: 10%;
+  text-align: center;
+  font-size: 7px;
+  margin-left: 60px;
+}
+body .base-experience :is(.experiences1, .experiences2, .experiences3, .experiences4, .experiences5, .experiences6, .experiences7, .experiences8, .experiences9, .experiences10) .instagram_log {
+  height: 25px;
+  width: 25px;
+}
+body .base-experience :is(.experiences1, .experiences2, .experiences3, .experiences4, .experiences5, .experiences6, .experiences7, .experiences8, .experiences9, .experiences10) p {
+  display: flex;
+  vertical-align: top;
+  text-align: justify;
+}
+body .base-elegirnos {
+  max-width: 90%;
+}
+body .base-elegirnos :is(.elijen1, .elijen2, .elijen3, .elijen4, .elijen5, .elijen6, .elijen7) {
+  display: inline-block;
+  width: 300px;
+  height: 380px;
+  margin-top: 10px;
+  margin-left: 40px;
+  display: inline-block;
+  border-radius: 10px;
+  border-style: solid solid solid;
+}
+body .base-elegirnos :is(.elijen1, .elijen2, .elijen3, .elijen4, .elijen5, .elijen6, .elijen7) p {
+  font-size: 15px;
+}
+body .base-elegirnos :is(.elijen1, .elijen2, .elijen3, .elijen4, .elijen5, .elijen6, .elijen7) img {
+  height: 50%;
+  width: 50%;
+  margin-left: 20%;
+}
+body .base-elegirnos :is(.elijen2, .elijen5, .elijen6) {
+  background-color: #FFCA2C;
+}
+body .base-elegirnos :is(.elijen4, .elijen7) {
+  background-color: #478AC9;
+}
+body .whatsappbutton {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  float: left;
+}
+body .whatsappbutton img {
+  display: grid;
+  z-index: 9000;
+  position: fixed;
+}
+body .base-geolocali-form {
+  height: 450px;
+  position: relative;
+}
+body .base-geolocali-form iframe {
+  height: 50%;
+  width: 40%;
+  margin-left: 5%;
+  margin-top: 5%;
+  position: static;
+}
+body .base-geolocali-form .datos {
+  position: static;
+  margin-left: 30%;
+  max-width: 20%;
+}
+body .base-geolocali-form .datos p {
+  position: static;
+  display: flex word-break;
+  margin-bottom: 10%;
+  font-size: 26px;
+  color: #FFF;
+}
+body .base-partners {
+  position: relative;
+  align-items: center;
+  height: fit-content;
+}
+body .base-partners .container-fluid .d-flex {
+  gap: 10px;
+}
+body .base-partners .container-fluid .partners_images {
+  display: inline-flex;
+  height: 160px;
+  width: 150px;
+}
+body :is(.bi-brightness-alt-high, .bi-moon-fill) {
+  display: inline;
+  position: static;
+  margin-right: 50px;
+  color: #334155;
+}
+body .bi-brightness-alt-high {
+  margin-top: 0px;
+}
+body #slider {
+  display: inline-flex;
+  position: absolute;
+}
+body :is(.bi-brightness-alt-high, .bi-moon-fill) {
+  display: inline;
+}
+body .base-geolocali-form {
+  position: relative;
+  background-color: #478AC9;
+  height: 400px;
+  margin-bottom: 300px;
+}
+body .base-geolocali-form iframe {
+  position: absolute;
+  height: 200px;
+  width: 300px;
+  margin-bottom: 50vh;
+}
+body .base-geolocali-form .datos {
+  position: static;
+  margin-left: 50%;
+  max-width: 20%;
+}
+body .base-geolocali-form .datos p {
+  display: flex word-break;
+  margin-bottom: 10%;
+  font-size: 10px;
+  color: #FFF;
+}
+body .kanban-board {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+body .kanban-board .kanban-column {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+body .kanban-board .kanban-column h2 {
+  text-align: center;
+}
+body .kanban-board .kanban-column .card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+body .kanban-board .kanban-column .card h5 {
+  margin-bottom: 5px;
+}
+body .kanban-board .kanban-column .card p {
+  margin: 0;
+}
+body .kanban-board .kanban-column p.no-cards {
+  text-align: center;
+  color: #777;
+}
+body .kanban-board .abierto {
+  background-color: tomato;
+  width: 45px;
+  font-size: 12px;
+  color: aliceblue;
+  border-radius: 3px;
+}
+body .kanban-board .enprogreso {
+  background-color: #FFCA2C;
+  width: 50px;
+  font-size: 12px;
+  color: aliceblue;
+  border-radius: 3px;
+  text-align: center;
+}
+body .kanban-board .cancelado {
+  background-color: greenyellow;
+  width: 45px;
+  font-size: 12px;
+  color: aliceblue;
+  border-radius: 3px;
+}
+body .avatar {
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
+}
+body .card {
+  position: relative;
+  display: grid;
+  height: 400px;
+}
+body .comentarios {
+  position: relative;
+  display: grid;
+  margin-top: 0vh;
+  left: 70%;
+  margin-right: 50%;
+  width: fit-content;
+}
+body .card {
+  margin-bottom: 20px;
+}
+body .card .card-header {
+  background-color: #17a2b8;
+  color: #fff;
+}
+body .card .card-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+body .card .card-text {
+  margin-bottom: 15px;
+}
+body .card .list-group-item {
+  border: none;
+  padding: 15px;
+}
+body .card .list-group-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+body .card .list-group-item .btn-danger {
+  margin-top: 10px;
+}
+body .card .list-group:hover {
+  color: #fff !important;
+}
+body #exampleModal {
+  margin-top: 50px;
+}
+
+#contenedorFormulario {
+  max-width: 920px;
+  margin: 0 auto;
+  background-color: #334155;
+  padding: 20px;
+  border-radius: 8px;
+}
+#contenedorFormulario h2 {
+  color: aliceblue;
+  text-align: center;
+}
+#contenedorFormulario #miFormulario {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+#contenedorFormulario label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #FFF;
+}
+#contenedorFormulario textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  resize: vertical;
+}
+#contenedorFormulario #id_nombre,
+#contenedorFormulario #id_descripcion,
+#contenedorFormulario #id_requisitos {
+  border-color: #3498db;
+  border-radius: 8px;
+}
+#contenedorFormulario button {
+  background-color: aliceblue;
+  color: #334155;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: block;
+  margin: 0 auto; /* Centra el botón */
+}
+#contenedorFormulario button:hover {
+  background-color: #92c5f8;
+  color: #334155;
+}
+
+/*css Variables prefix*/
+/*font family*/
+/*font sizes*/
+/*12px*/
+/*14px*/
+/*16px*/
+/*18px*/
+/*20px*/
+/*24px*/
+/*30*/
+/*36px*/
+/*48px*/
+/*60px*/
+/* font weigth*/
+/*leading / line heights*/
+/*COLORS*/
+/*THEME GLOBAL VALUES*/
+.logo_not_found {
+  content: url("../assets/img/pagenotfound.png");
+  height: 580px !important;
+  width: 1080px !important;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.logo_not_found .logo_Infinity img {
+  border: none !important; /* Anula cualquier regla de borde */
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+
+/*# sourceMappingURL=style.css.map */

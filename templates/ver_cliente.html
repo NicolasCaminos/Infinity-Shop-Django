@@ -1,0 +1,20 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container mt-4">
+    <h2>Detalles del Cliente</h2>
+    
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Nombre: {{ cliente.nombre }}</h5>
+        <p class="card-text">Email: {{ cliente.email }}</p>
+        <p class="card-text">Dirección: {{ cliente.direccion }}</p>
+        <p class="card-text">Fecha de Nacimiento:{{ cliente.fecha_nacimiento|date:"d/m/Y" }}</p>
+        <!-- Puedes agregar más campos según tu modelo Cliente -->
+      </div>
+    </div>
+
+    <a href="{% url 'cliente' %}" class="btn btn-primary mt-3">Volver a la lista de clientes</a>
+  </div>
+{% endblock %}

@@ -1,0 +1,6 @@
+
+staticfiles
+node_modules
+.idea
+debug.log
+.vscode

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <form  id="contenedorFormulario" method="post" enctype="multipart/form-data">
+    <h2>Agregar Producto</h2>
+
+      {% csrf_token %}
+      {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Guardar Producto</button>
+  </form>
+
+  <a href="{% url 'producto' %}" class="btn btn-secondary">Volver a la lista de productos</a>
+{% endblock %}

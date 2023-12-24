@@ -1,0 +1,80 @@
+<!-- trekking_detail.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Comentar
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class=".col-md-3 .offset-md-3">       
+               <form  method="post" action="{% url 'trekking_detail' trekking_id=trekking.id %}" id="contenedorFormulario" enctype="multipart/form-data">
+                <h2 class="modal-title fs-5" id="exampleModalLabel">Agregar Comentarios</h2>
+              {% csrf_token %}
+              {{ form.as_p }}
+              <button type="submit" id="guardarComentario" class="btn btn-primary">Guardar Comentario</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        <div class="card border-info mb-3">
+          <div class="card-header">
+            Reporte id: {{ trekking.id }}
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{ trekking.nombre }}</h5>
+            <p class="card-text">Descripción del Reporte: {{ trekking.descripcion }}</p>
+            <strong>Reportado por: {{ trekking.usuario }}</strong>
+            <!-- Listado de comentarios -->
+            <ul class="list-group">
+                <h4>Comentarios</h4>
+              {% if comments %}
+                {% for comment in comments %}
+                  <li class="list-group-item">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div>
+                        <strong>{{ comment.usuario.username }}</strong> - {{ comment.content }}
+                        {% if comment.estado and comment.content == 'Cambio de estado' %}
+                          <p class="mt-1 mb-1">{{ comment.content }}: {{ comment.estado }}</p>
+                        {% endif %}
+                      </div>
+                      {% if comment.imagen %}
+                        <img src="{{ comment.imagen.url }}" alt="Comentario Imagen" class="img-thumbnail">
+                      {% endif %}
+                    </div>
+
+                    {% if comment.usuario == request.user %}
+                      <form method="post" action="{% url 'trekking_detail' trekking_id=trekking.id %}" style="display: inline;">
+                        {% csrf_token %}
+                        <input type="hidden" name="delete_comment" value="{{ comment.id }}">
+                        <button type="submit" class="btn btn-danger btn-sm mt-2" title="Eliminar">Eliminar</button>
+                      </form>
+                    {% endif %}
+                  </li>
+                {% endfor %}
+              {% else %}
+                <li class="list-group-item">No hay comentarios aún.</li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
